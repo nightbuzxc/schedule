@@ -1,0 +1,608 @@
+  @font-face {
+  font-family: 'E-Ukraine Head';
+  src: url('fonts/e-UkraineHead-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'E-Ukraine Head', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.backbttn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+
+.homepage {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 78px;
+  box-sizing: border-box;
+}
+
+.show-location {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'E-Ukraine Head', sans-serif;
+}
+
+.show-location:hover {
+  background-color: #5a6268;
+  transition: 0.3px;
+}
+
+.block {
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.block::after {
+    content: '';
+    position: absolute;
+    left: 80px;
+    right: 80px;
+    bottom: 0;
+    height: 1.5px;
+    background-color: #80B3D9;
+}
+
+
+.logo-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px 90px;
+}
+
+.logo-info {
+  display: flex;
+  align-items: center;
+
+}
+
+.logo {
+  height: 75px;
+  margin-right: 25px;
+}
+
+.vsp-rtfk {
+  color: #000;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.5em;
+  position: relative;
+  top: -13px;
+
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: #fff;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.modal-content img {
+    margin: 0 auto;
+}
+
+.modal-content a {
+    margin: 5px;
+}
+.qrcode {
+  color: #000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+.button-0 {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 2px;
+  color: #5183B8;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px 32px;
+  transition: 0.3s;
+  font-family: 'E-Ukraine Head', sans-serif;
+  text-decoration: none;
+}
+
+.button-0:hover {
+  background-color: #5183B8;
+  color: #fff;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.button-1 {
+  background-color: #5183B8;
+  border: 3px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px 32px;
+  transition: 0.3s;
+  font-family: 'E-Ukraine Head', sans-serif;
+  text-decoration: none;
+}
+
+.button-1:hover {
+  background-color: #fff;
+  color: #5183B8;
+  border-radius: 2px;
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.left-panel {
+  width: 40%;
+  max-width: 380px; 
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 10px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.form-box {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+}
+
+
+.form-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #5183B8;
+}
+
+form label {
+  display: block;
+  display: block;
+  margin: 4px 0 2px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+form select, form input[type="text"] {
+  width: 100%;
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'E-Ukraine Head', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.add-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.add {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add0 {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.table-box {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.table-box h3 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+table th, table td {
+  padding: 8px 12px;
+  border: 1px solid #ffffff;
+  text-align: left;
+  width: 20%;
+  height: 50px;
+  word-wrap: break-word;
+}
+
+table thead {
+  background-color: #5183B8;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+form.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-family: 'E-Ukraine Head', sans-serif;
+}
+
+form.filter .filter-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+form.filter label {
+  font-weight: 500;
+  white-space: nowrap;
+  margin-bottom: 0;
+  line-height: 1.5;
+  height: 36px;
+}
+
+form.filter select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 160px;
+  max-width: 200px;
+  font-size: 14px;
+  background-color: #fff;
+  appearance: none;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+form.filter a {
+  text-decoration: none;
+}
+
+.group-select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.group-select:focus {
+  outline: none;
+  border-color: #0b63ce;
+  box-shadow: 0 0 3px rgba(11, 99, 206, 0.4);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.login input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.login input:focus {
+  border-color: #0b63ce;
+  background-color: #fff;
+  outline: none;
+}
+
+.login a {
+  color: #000;
+  display: flex;
+}
+
+.login a:hover {
+  color: #5183B8;
+  transition: 0.3s;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+.footer {
+            background-color: #5183B8;
+            padding: 78px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin: 0 15px 20px 15px;
+        }
+        
+        .footer h1, .footer h2, .footer h3, p {
+            color: #fff;
+        }
+        
+        .footer h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .footer h2 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .footer h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .footer ul li {
+            margin-bottom: 5px;
+        }
+        
+        
+        .copyright {
+            background-color: #232323;
+            text-align: center;
+            font-size: 0.9em;
+            color: #fff;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            width: 100%;
+        }
+      .groups-grid {
+          font-family: 'E-Ukraine Head', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 8000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.group-category {
+  font-family: 'E-Ukraine Head', sans-serif;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.group-category:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.category-title {
+    font-family: 'E-Ukraine Head', sans-serif !important;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    background: #e9ecef;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+
+
+.category-title::after {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.group-block {
+  font-family: 'E-Ukraine Head', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px;
+    background: #fff;
+}
+
+.group-button-link {
+    display: block;
+    width: 100%;
+}
+
+.button-3 {
+  font-family: 'E-Ukraine Head', sans-serif;
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    color: #5183B8;
+    border: 0px solid #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-3:hover {
+    background: #5183B8;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.button-3[active] {
+    background: #598fc7;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+h1.text-center {
+    text-align: center;
+    color: #2c3e50;
+    margin: 25px 0 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .groups-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .group-block {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-title {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+
+.updatetime {
+  text
+}

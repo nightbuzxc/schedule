@@ -1,0 +1,142 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+.logo-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 55px;
+}
+
+.vsp-rtfk {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.button-1 {
+    background-color: #0b63ce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.button-1:hover {
+    background-color: #084a9a;
+}
+
+.homepage h3 {
+    margin-top: 25px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.group-categories {
+    max-width: 720px;
+    margin-top: 15px;
+}
+
+.group-category {
+    margin-bottom: 15px;
+    border: 1px solid #a9c4ff;
+    border-radius: 6px;
+    background-color: #e6f0ff;
+    padding: 0 15px 15px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.group-category > summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 10px;
+    user-select: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: #d5e4ff;
+    transition: background-color 0.25s ease;
+}
+
+.group-category[open] > summary {
+    background-color: #0b63ce;
+    color: white;
+}
+
+/* При наведенні на summary */
+.group-category > summary:hover {
+    background-color: #0b63ce;
+    color: white;
+}
+
+.group-sublist-button-grid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+}
+
+.group-sublist-button-grid a {
+    text-decoration: none;
+}
+
+.button-0 {
+    background-color: #f0f4ff;
+    border: 1px solid #a9c4ff;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0b63ce;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    display: block;
+    width: 100%;
+    user-select: none;
+}
+
+.button-0:hover {
+    background-color: #0b63ce;
+    color: white;
+}
+
+.button-0.active {
+    background-color: #0b63ce;
+    color: white;
+    cursor: default;
+}
+
+/* Прибрати стрілку у details summary для кращого вигляду */
+.group-category > summary::-webkit-details-marker {
+    display: none;
+}
+
+.group-category > summary::marker {
+    content: '';
+}

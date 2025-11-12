@@ -1,0 +1,13 @@
+{
+    "name": "myvendor/qrcode",
+    "autoload": {
+        "psr-4": {
+            "Myvendor\\Qrcode\\": "src/"
+        }
+    },
+    "require": {
+        "endroid/qr-code": "^4.8",
+        "tecnickcom/tcpdf": "^6.9",
+        "phpoffice/phpspreadsheet": "^2.1"
+    }
+}

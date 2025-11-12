@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # 1. Ваш PHP/Apache сервіс
+  web:
+    build: .
+    container_name: supernova_web
+    ports:
+      - "8080:80"  # Ваш сайт буде доступний на http://localhost:8080
+    restart: unless-stopped
+    volumes:
+      - ./src:/var/www/html # Додано для зручної розробки
+    depends_on:
+      - db           # Вказуємо, що web залежить від db. 
+                   # Docker запустить db першим.
+
+  # 2. Сервіс Бази Даних (MySQL)
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes' # <-- Дозволяємо порожній пароль
+      MYSQL_DATABASE: college_schedule     # <-- База даних все одно буде створена
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+  # 3. Сервіс phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    restart: always
+    ports:
+      - "8081:80"  # PMA буде доступний на http://localhost:8081
+                   # (використовуємо 8081, бо 8080 вже зайнятий)
+    environment:
+      PMA_HOST: db     # <-- ВАЖЛИВО: підключаємось до сервісу 'db'
+    depends_on:
+      - db           # Запускати тільки після старту 'db'
+
+# Створюємо іменований volume для зберігання даних БД
+volumes:
+  db-data:
